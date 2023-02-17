@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "418ececf-fed4-4c2e-9d92-6578bf2deb07",
+		"name": "Reddit API",
+		"description": "Watch my Reddit API Tutorial here: [https://www.youtube.com/watch?v=x9boO9x3TDA&ab_channel=Andy'sTechTutorials](https://www.youtube.com/watch?v=x9boO9x3TDA&ab_channel=Andy'sTechTutorials)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23454446"
+	},
+	"item": [
+		{
+			"name": "Access Token for Reddit API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{client_id}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "{{reddit_username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{reddit_password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.reddit.com/api/v1/access_token",
+					"protocol": "https",
+					"host": [
+						"www",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"access_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Identity of the User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "ChangeMeClient/0.1 by YourUsername"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{bearer_token}}"
+					}
+				],
+				"url": {
+					"raw": "https://oauth.reddit.com/api/v1/me",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me"
+					]
+				},
+				"description": "Documentation link for additional information about this API call: [https://www.reddit.com/dev/api/#GET_api_v1_me](https://www.reddit.com/dev/api/#GET_api_v1_me)"
+			},
+			"response": []
+		},
+		{
+			"name": "Breakdown of Subreddit Karma",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "ChangeMeClient/0.1 by YourUsername"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{bearer_token}}"
+					}
+				],
+				"url": {
+					"raw": "https://oauth.reddit.com/api/v1/me/karma",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me",
+						"karma"
+					]
+				},
+				"description": "Documentation link for additional information about this API call: [https://www.reddit.com/dev/api/#GET_api_v1_me_karma](https://www.reddit.com/dev/api/#GET_api_v1_me_karma)"
+			},
+			"response": []
+		},
+		{
+			"name": "Preference Settings of User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "ChangeMeClient/0.1 by YourUsername"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{bearer_token}}"
+					}
+				],
+				"url": {
+					"raw": "https://oauth.reddit.com/api/v1/me/prefs",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me",
+						"prefs"
+					]
+				},
+				"description": "Documentation link for additional information about this API call: [https://www.reddit.com/dev/api/#GET_api_v1_me_prefs](https://www.reddit.com/dev/api/#GET_api_v1_me_prefs)"
+			},
+			"response": []
+		},
+		{
+			"name": "Data about Apple Subreddit",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "ChangeMeClient/0.1 by YourUsername"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{bearer_token}}"
+					}
+				],
+				"url": {
+					"raw": "https://oauth.reddit.com/r/apple/new",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"r",
+						"apple",
+						"new"
+					]
+				},
+				"description": "Documentation link for additional information about this API call: [https://www.reddit.com/dev/api/#GET_new](https://www.reddit.com/dev/api/#GET_new)"
+			},
+			"response": []
+		}
+	]
+}
