@@ -9,7 +9,7 @@
 
 ## Screenshots
 ### Reddit Postman API Collection
- <img src="https://github.com/AndyUGA/Reddit_API_Postman_Collection_and_Environment_Variables/blob/main/Reddit%20API%20Postman%20API%20Collection.png">
+ <img src="https://github.com/AndyUGA/Reddit_API_Postman_Collection_and_Environment_Variables/blob/main/Screenshots/Reddit%20API%20Postman%20API%20Collection.png">
  
 ### Reddit Postman API Environment Variables
-  <img src="https://github.com/AndyUGA/Reddit_API_Postman_Collection_and_Environment_Variables/blob/main/Reddit%20API%20Postman%20Environment%20Variables.png">
+  <img src="https://github.com/AndyUGA/Reddit_API_Postman_Collection_and_Environment_Variables/blob/main/Screenshots/Reddit%20API%20Postman%20Environment%20Variables.png">
